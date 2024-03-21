@@ -6,6 +6,7 @@ public class TC_CreateBooking {
 
     @Test
     public void testPositivePOSTReq(){
+        System.out.println("This is working");
 
     }
 }

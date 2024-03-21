@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 ;
 
 
-public class BookingResponse {
+public class BookingRespons {
 
     @SerializedName("bookingid")
     @Expose
