@@ -1,6 +1,6 @@
 package org.example.base;
 
-import io.qameta.allure.internal.shadowed.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -13,6 +13,7 @@ import org.example.modules.PayloadManager;
 import org.testng.annotations.BeforeMethod;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class BaseTest {
 
@@ -47,7 +48,7 @@ public class BaseTest {
 
     }
 
-    public String getToken() throws  com.fasterxml.jackson.core.JsonProcessingException {
+    public String getToken() throws JsonProcessingException {
 
         requestSpecification = RestAssured.given().baseUri(APIConstants.BASE_URL).basePath("/auth");
         String payload = payloadManager.setToken();

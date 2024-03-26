@@ -71,11 +71,7 @@ public class PayloadManager {
         Booking bookingRespons = objectMapper.readValue(jsonString, Booking.class);
         return bookingRespons;
     }
-    public Booking JsonToObjectPOST(String jsonString) throws IOException {
-        objectMapper = new ObjectMapper();
-        Booking bookingRespons = objectMapper.readValue(jsonString, Booking.class);
-        return bookingRespons;
-    }
+
 
     public String updatedPayload() throws JsonProcessingException {
         objectMapper = new ObjectMapper();
